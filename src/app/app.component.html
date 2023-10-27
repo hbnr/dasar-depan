@@ -1,2 +1,10 @@
-<h1>Hello, world!</h1>
-<router-outlet></router-outlet>
+<h1>Why to unsubscribe observables</h1>
+<button (click)="toggleChildA()">Toggle child A</button>
+<button (click)="toggleChildB()">Toggle child B</button>
+<button (click)="toggleChildC()">Toggle child C</button>
+<button (click)="toggleChildD()">Toggle child D</button>
+
+<app-child-a *ngIf="showChildA$ | async"></app-child-a>
+<app-child-b *ngIf="showChildB$ | async"></app-child-b>
+<app-child-c *ngIf="showChildC$ | async"></app-child-c>
+<app-child-d *ngIf="showChildD$ | async"></app-child-d>
